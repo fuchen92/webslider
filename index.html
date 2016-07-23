@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <style media="screen">
+            * { margin: 0; padding: 0; }
+            ul, li { list-style: none; }
+            img { display: block; border: none; }
+            .wrap {
+                width: 789px;
+                height: 429px;
+                /*border: 1px solid red;*/
+                margin: 100px auto;
+                position: relative;
+                overflow: hidden;
+            }
+            .slidebox {
+                position: absolute;
+                /*width: 3600px;*/
+                height: 429px;
+                top: 0;
+                left: 0;
+            }
+            .slide-item { float: left; }
+            .slide-num {
+                /*text-align: center;*/
+                /*width: 100%;*/
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 15px;
+            }
+            .slide-num span {
+                display: inline-block;
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                border: 1px solid red;
+                cursor: pointer;
+                margin: 0 5px;
+            }
+            .active { background-color: red; }
+            .arrow {
+                position: absolute;
+                text-decoration: none;
+                top: 50%;
+                transform: translateY(-50%);
+                padding: 30px 20px;
+                font-size: 40px;
+                background-color: rgba(0, 0, 0, 0.5);
+                color: #ffffff;
+                font-weight: bold;
+                display: none;
+            }
+            .wrap:hover .arrow { display: block; }
+            .arrow:hover { color: red; }
+            .arrow-next { right: 0; }
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <ul class="slidebox">
+                <!-- <li class="slide-item"><img src="img/1.jpg" alt="" /></li>
+                <li class="slide-item"><img src="img/2.jpg" alt="" /></li>
+                <li class="slide-item"><img src="img/3.jpg" alt="" /></li>
+                <li class="slide-item"><img src="img/4.jpg" alt="" /></li> -->
+            </ul>
+            <div class="slide-num">
+                <!-- <span class="slide-idx active"></span>
+                <span class="slide-idx"></span>
+                <span class="slide-idx"></span>
+                <span class="slide-idx"></span> -->
+            </div>
+            <a href="#" class="arrow arrow-prev" id="prev">&lt;</a>
+            <a href="#" class="arrow arrow-next" id="next">&gt;</a>
+        </div>
+
+        <script src="slide.js"></script>
+    </body>
+</html>
